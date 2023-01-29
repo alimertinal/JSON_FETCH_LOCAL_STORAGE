@@ -1,0 +1,22 @@
+[
+    {
+        "name":"Mert",
+        "guests":5,
+        "status":false
+    },
+    {
+        "name":"Ali",
+        "guests":6,
+        "status":true
+    },
+    {
+        "name":"Omar",
+        "guests":3,
+        "status":false
+    },
+    {
+        "name":"Veli",
+        "guests":2,
+        "status":true
+    }
+]

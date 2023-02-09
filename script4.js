@@ -1,4 +1,24 @@
 const output = document.querySelector(".output");
+const btn1 = document.createElement('button')
+btn1.textContent='reaload JSON Data'
+btn1.addEventListener('click', reloader)
+document.body.append(btn1)
+
+const input1 = document.createElement('input')
+input1.setAttribute('placeholder','Name')
+const input2 = document.createElement('input')
+input2.setAttribute('type','number')
+input2.value='1'
+const btn2 = document.createElement('button')
+btn2.textContent='Add to List'
+const div1 = document.createElement('div')
+div1.append(input1)
+div1.append(input2)
+div1.append(btn2)
+btn2.addEventListener('click',addToList)
+document.body.append(div1)
+
+
 const url = 'list.json';
 let myList = [];
 let localData = localStorage.getItem('myList');
@@ -54,6 +74,9 @@ function makeList(item, index) {
     div.classList.add('box');
     div.innerHTML = `${item.name} #(${item.guests})`;
     output.append(div);
+
+
+
     if (item.status) {
         div.classList.add('confirmed');
     } else {
